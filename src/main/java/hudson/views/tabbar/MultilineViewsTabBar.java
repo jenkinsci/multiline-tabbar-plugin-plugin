@@ -47,7 +47,7 @@ public class MultilineViewsTabBar extends ViewsTabBar {
         public String getDisplayName() {
             //return Messages.DefaultViewsTabsBar_DisplayName();
             //return "Multiline Views TabBar";
-            return "Colorful Views TabBar";
+            return "Multi-row Views TabBar";
         }
     }
 
