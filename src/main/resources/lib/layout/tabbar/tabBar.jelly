@@ -23,25 +23,74 @@ THE SOFTWARE.
 -->
 
 <j:jelly xmlns:j="jelly:core" xmlns:d="jelly:define" xmlns:st="jelly:stapler">
-    <table cellpadding="0" cellspacing="0" id="viewList">
-        <j:set var="tab" value="${tabs}" />
-        <!-- dummy row to get spacing right -->
-        <tr style="height:3px;">
-            <td style="height:3px; padding:0px"></td>
-            <j:set var="tabIndex" value="0" />
-            <j:set var="tabPass" value="pass1" />
+
+    <style type="text/css">
+
+            /* CSS Tabs */
+            #tabBarContainer {
+                background: #E6E6E6;
+                margin: 10px auto 0;
+                padding: 3px;
+                border: 1px solid #BBBBBB;
+            }
+
+            /* to stretch the container div to contain floated list */
+            #tabBarContainer:after {
+                content: ".";
+                display: block;
+                line-height: 1px;
+                font-size: 1px;
+                clear: both;
+            }
+
+            ul#tabList {
+                list-style: none;
+                padding: 0;
+                margin: 0 auto;
+                width: 100%;
+            }
+
+            ul#tabList li {
+                display: block;
+                float: left;
+                width: 10%;
+                margin: 0;
+                padding: 0;
+                text-align: center
+            }
+
+            ul#tabList li a {
+                display: block;
+                width: 100%;
+                padding: 3px;
+                border-width: 1px;
+                border-color: #ffe #aaab9c #ccc #fff;
+                border-style: solid;
+                color: #777;
+                text-decoration: none;
+                background: #f7f2ea;
+            }
+
+            #tabBarContainer>ul#tabList li a { width: auto; }
+
+            ul#tabList li#active a {
+                background: #E0E0F0;
+                color: #800000;
+            }
+
+            ul#tabList li a:hover, ul#tabList li#active a:hover {
+                color: #800000;
+                background: transparent;
+                border-color: #aaab9c #fff #fff #ccc;
+            }
+
+    </style>
+    
+    <div id="tabBarContainer">
+        <ul id="tabList">
+            <j:set var="tab" value="${tabs}" />
             <d:invokeBody />
-        </tr>
-        <tr>
-            <td style="border: none; border-bottom: 1px solid #bbb;">
-                <st:nbsp/>
-            </td>
-            <j:set var="tabIndex" value="0" />
-            <j:set var="tabPass" value="pass2" />
-            <d:invokeBody />
-            <td class="filler">
-                <st:nbsp/>
-            </td>
-        </tr>
-    </table>
+        </ul>
+    </div>
+  
 </j:jelly>
