@@ -35,7 +35,7 @@ THE SOFTWARE.
 
     <artifactId>multiline-tabbar-plugin</artifactId>
     <packaging>hpi</packaging>
-     <version>1.1-SNAPSHOT</version>
+     <version>1.0</version>
     <name>Multiline Views TabBar Plugin</name>
     <description>This plug-in provides a multi-line TabBar extension Extension to Views Tababar</description>
 
@@ -57,5 +57,11 @@ THE SOFTWARE.
             <id>wjprakash</id>
         </developer>
     </developers>
+
+  <scm>
+    <connection>scm:svn:https://guest@svn.dev.java.net/svn/hudson/tags/multiline-tabbar-plugin-1.0</connection>
+    <developerConnection>scm:svn:https://svn.dev.java.net/svn/hudson/tags/multiline-tabbar-plugin-1.0</developerConnection>
+    <url>https://hudson.dev.java.net/source/browse/hudson/tags/multiline-tabbar-plugin-1.0</url>
+  </scm>
 </project>
 
