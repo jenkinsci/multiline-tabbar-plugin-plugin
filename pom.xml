@@ -24,77 +24,39 @@ THE SOFTWARE.
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    
     <parent>
-        <groupId>org.jvnet.hudson.main</groupId>
-        <artifactId>pom</artifactId>
-        <version>1.380-SNAPSHOT</version>
+        <groupId>org.jvnet.hudson.plugins</groupId>
+        <artifactId>plugin</artifactId>
+        <version>1.381</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
+
 
     <artifactId>multiline-tabbar-plugin</artifactId>
     <packaging>hpi</packaging>
+     <version>1.0-SNAPSHOT</version>
     <name>Multiline Views TabBar Plugin</name>
     <description>This plug-in provides a multi-line TabBar extension Extension to Views Tababar</description>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.jvnet.hudson.main</groupId>
-            <artifactId>hudson-core</artifactId>
-            <version>${project.version}</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.jvnet.hudson.main</groupId>
-            <artifactId>hudson-war</artifactId>
-            <type>war</type>
-            <version>1.378-SNAPSHOT<!-- replace this with the version you want-->
-            </version>
-            <scope>test</scope>
-        </dependency>
-         
-    </dependencies>
-    
-    <build>
-        <!--
-          Since new versions need to overwrite old versions, it's better
-          not to have version number in the .hpi file name.
-        -->
-        <finalName>${project.artifactId}</finalName>
-        <defaultGoal>package</defaultGoal>
-        <plugins>
-            <plugin>
-                <groupId>org.jvnet.hudson.tools</groupId>
-                <artifactId>maven-hpi-plugin</artifactId>
-                <version>1.54</version>
-                <extensions>true</extensions>
-                <configuration>
-                    <showDeprecation>true</showDeprecation>
-                    <disabledTestInjection>true</disabledTestInjection>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.kohsuke.stapler</groupId>
-                <artifactId>maven-stapler-plugin</artifactId>
-                <version>1.12</version>
-                <extensions>true</extensions>
-            </plugin>
-            <plugin>
-                <groupId>org.jvnet.localizer</groupId>
-                <artifactId>maven-localizer-plugin</artifactId>
-                <version>1.8</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>generate</goal>
-                        </goals>
-                        <configuration>
-                            <fileMask>Messages.properties</fileMask>
-                            <outputDirectory>target/generated-sources/localizer</outputDirectory>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-    </build>
+    <project>
+        <url>http://wiki.hudson-ci.org/display/HUDSON/Extension+Point+for+Project+Views+Navigation</url>
+    </project>
+
+    <licenses>
+        <license>
+            <name>MIT license</name>
+            <comments>All source code is under the MIT license.</comments>
+        </license>
+    </licenses>
+
+
+    <developers>
+        <developer>
+            <name>Winston Prakash</name>
+            <id>wjprakash</id>
+        </developer>
+    </developers>
 
 </project>
 
