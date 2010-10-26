@@ -37,11 +37,9 @@ THE SOFTWARE.
     <packaging>hpi</packaging>
      <version>1.1-SNAPSHOT</version>
     <name>Multiline Views TabBar Plugin</name>
-    <description>This plug-in provides a multi-line TabBar extension Extension to Views Tababar</description>
+    <description>Provides a multi-line tab bar for views.</description>
 
-    <project>
-        <url>http://wiki.hudson-ci.org/display/HUDSON/Extension+Point+for+Project+Views+Navigation</url>
-    </project>
+    <url>http://wiki.hudson-ci.org/display/HUDSON/Extension+Point+for+Project+Views+Navigation</url>
 
     <licenses>
         <license>
